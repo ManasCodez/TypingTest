@@ -1,0 +1,155 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #f58505;
+  padding: 10px;
+  text-align: center;
+  font-size: 40px;
+  border-radius: 50px;
+  font-size: 35px;
+  height: 150px;
+  width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+main {
+  margin: 20px;
+}
+
+section {
+  text-align: center;
+  font-size: 35px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: #f2f2f2;
+}
+
+textarea {
+  width: 800px;
+  height: 130px;
+  margin: 0 auto;
+  font-size: 35px;
+  margin-top: 30px;
+  
+  margin-top: 60px;
+}
+
+
+
+footer {
+  background-color: #f2f2f2;
+  padding: 10px;
+  text-align: center;
+  margin-top: 0%;
+  margin-left: 0 auto;
+  margin-right:  0 auto;
+  font-size: 50px;
+
+}
+
+
+html{
+
+    background-color: rgb(15, 15, 15);
+}
+
+h2 {
+    
+    margin-left:50px;
+    padding: 15px;
+    margin-right: 50px;
+    border-radius: 25px;
+    background-color: #03f3df;
+    text-align: center;
+    font-size: 50px
+    
+    
+    
+}
+
+p{
+
+  padding: 0%;
+  margin-top: 0%;
+  margin-bottom: 0%;
+}
+
+
+h3{
+  font-size: 55px;
+  color: #f51505;
+}
+
+
+.button{
+  position: absolute;
+  font-size: 40px;
+  background-color: #03f3df;
+  border-radius: 50px;
+  padding: 10px;
+  left: 5%;
+  margin: -8px;
+  height: 100px;
+  width: 300px;
+  margin-top: 200px;
+}
+button:hover{
+
+  color: #f70505;
+ 
+  font-size:30px ;
+  background-color: #50c7bd;
+}
+
+.more{
+
+  position: absolute;
+  font-size: 40px;
+  background-color: #03f3bf;
+  border-radius: 50px;
+  padding: 10px;
+  left: 65%;
+  margin: -8px;
+  height: 100px;
+  width: 300px;
+  margin-top: 200px;
+
+}
+
+
+.contact-section{
+  text-align: center;
+  font-size: 35px;
+  margin-top: 50%;
+  margin-bottom: 100px;
+  color: #fff;
+
+}
+
+.linkedin-btn {
+  display: inline-block;
+  font-size: 40px;
+  font-weight: 300px;
+  background-color: #0897e4;
+  color: #fff;
+  padding:  20px;
+  border-radius: 20px;
+  text-decoration: none;
+  margin-left: 30%;
+  margin-right: auto;
+  margin-bottom: 60px;
+  height:100px;
+  width:500px
+  
+  
+  
+  
+}
+
+.linkedin-btn:hover {
+  background-color: #005FAB;
+}
