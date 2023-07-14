@@ -1,9 +1,7 @@
 let startTime, endTime;
 
 const sentences = [
-  "hello",
-  "Manas",
-  "I am fine",
+
   "This website is created for fun and my coding practise" ,
   " One of my most productive days was throwing away 1000 lines of code that i coded",
   "If debudding is the process of removing software bugs, then programming must be the process of putting them in",
