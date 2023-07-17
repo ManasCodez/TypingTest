@@ -15,6 +15,18 @@ const sentences = [
   "Your most unhappy customers are your greatest source of learning",
   " A good programmer is someone who always looks both ways before crossing a one-way street",
   "There is a big difference between making a simple product & making a product simple",
+  "If you can't solve a bug, make it a feature.",
+  "One of the best programming skills you can have is knowing when to walk away for a while.",
+  "Give a man a program, frustrate him for a day, Teach a man to program, frustrate him for lifetime.",
+  "Code teaches you how to face really big problems",
+  "Where there is a code, there is a bug.",
+  "Code is like humor. When you have to explain it, it's bad.",
+  "When I wrote this code, only God and I understood what I did. Now only God knows.",
+  "There is always one more bug to fix.",
+  "If, at first, you do not succeed, call it version 1.0.",
+  ""
+  
+  
   ];
 
 let currentSentenceIndex = 0;
@@ -94,8 +106,6 @@ document.getElementById('input').addEventListener('keypress', function (e) {
     checkAccuracy();
   }
 });
-
-
 
 
 
