@@ -24,7 +24,7 @@ const sentences = [
   "When I wrote this code, only God and I understood what I did. Now only God knows.",
   "There is always one more bug to fix.",
   "If, at first, you do not succeed, call it version 1.0.",
-  ""
+  
   
   
   ];
