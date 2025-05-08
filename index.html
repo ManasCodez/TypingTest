@@ -1,51 +1,58 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Typing Test</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Typing Test</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <u><h1>TYPING TEST</h1></u>
-   
-  </header>
-  <h2>Test your Typing Speed and Accuracy</h2>
+  <div class="container">
+    <header>
+      <h1>NEON TYPING TEST</h1>
+      <h2>Test Your Speed & Accuracy</h2>
+    </header>
 
-  <main>
-    <section>
-     
-      <b><p id="quote"></p></b>
-      <textarea id="input" placeholder="Start typing here the above text..." oninput="startTimer()" onkeydown="checkEnterKey(event)"></textarea>
-      <h3> Press Enter to stop and see scores</h3>
-      <p id="accuracy"></p>
-      <p id="wpm"></p>
-      <p id="time"></p>
-    </section>
-  </main>
+    <main>
+      <div class="typing-container">
+        <div id="quote"></div>
+        <textarea id="input" placeholder="Start typing the text above..." autofocus></textarea>
+        <p class="instructions">Press Enter to submit and see your results</p>
+        
+        <div class="results">
+          <div class="result-box">
+            <p>Words Per Minute</p>
+            <div id="wpm" class="result-value">0</div>
+          </div>
+          <div class="result-box">
+            <p>Accuracy</p>
+            <div id="accuracy" class="result-value">0%</div>
+          </div>
+          <div class="result-box">
+            <p>Time</p>
+            <div id="time" class="result-value">0s</div>
+          </div>
+          <div class="result-box">
+            <p>Characters</p>
+            <div id="chars" class="result-value">0/0</div>
+          </div>
+        </div>
+      </div>
 
-  <a href="https://github.com/ManasCodez"> <button class="button"><b>About Me</b></button></a>
-  <a href="https://manascodez.github.io/LearnToCube/"> <button class="more"><b>More by Me</b></button></a>
+      <div class="buttons">
+        <a href="https://github.com/ManasCodez" class="btn btn-primary">About Me</a>
+        <a href="https://manascodez.github.io/LearnToCube/" class="btn btn-secondary">More Projects</a>
+        <a href="https://www.linkedin.com/in/manas-sharma-404b90282" class="btn btn-primary">Connect on LinkedIn</a>
+      </div>
+    </main>
+  </div>
 
-  <div class="contact-section">
-    <h3><u>Contact </h3></u>
-    <p>For any inquiries, or errors found please reach out to us:</p>
-    <p>Email: <h4>ManasMailsss@gamil.com</h4></p>
-    </div>
-  
-      <a href="https://www.linkedin.com/in/manas-sharma-404b90282" > <button class="linkedin-btn"><b>Connect on Linkedin</b></button></a>
-    
-
-    <footer>
-    
-  
-  
   <footer>
-    <p>© 2023 Typing Test. All rights reserved.</p>
+    <p>© 2023 Neon Typing Test | Created by Manas Sharma</p>
+    <p>Email: ManasMailsss@gmail.com</p>
   </footer>
 
   <script src="script.js"></script>
-   
-
- 
 </body>
 </html>
