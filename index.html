@@ -1,23 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Typing Calculator</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Typing Test</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;400&display=swap">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
-    <h1>Typing Speed Test</h1>
-    <div id="quote" class="quote"></div>
-    <textarea id="input" placeholder="Start typing here..." rows="4"></textarea>
-    <div class="stats">
-      <p>Characters: <span id="chars">0/0</span></p>
-      <p>Time: <span id="time">0s</span></p>
-      <p>WPM: <span id="wpm">0</span></p>
-      <p>Accuracy: <span id="accuracy">0%</span></p>
-    </div>
+    <header>
+      <h1>NEON TYPING TEST</h1>
+      <h2>Test Your Speed & Accuracy</h2>
+    </header>
+
+    <main>
+      <div class="typing-container">
+        <div id="quote" class="quote-text"></div>
+        <textarea id="input" placeholder="Start typing the text above..." autofocus></textarea>
+        <p class="instructions">Press Enter to submit and see your results</p>
+        
+        <div class="results">
+          <div class="result-box">
+            <p class="result-label">Words Per Minute</p>
+            <div id="wpm" class="result-value">0</div>
+          </div>
+          <div class="result-box">
+            <p class="result-label">Accuracy</p>
+            <div id="accuracy" class="result-value">0%</div>
+          </div>
+          <div class="result-box">
+            <p class="result-label">Time</p>
+            <div id="time" class="result-value">0s</div>
+          </div>
+          <div class="result-box">
+            <p class="result-label">Characters</p>
+            <div id="chars" class="result-value">0/0</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="buttons">
+        <a href="https://github.com/ManasCodez" class="btn btn-primary">About Me</a>
+        <a href="https://manascodez.github.io/LearnToCube/" class="btn btn-secondary">More Projects</a>
+        <a href="https://www.linkedin.com/in/manas-sharma-404b90282" class="btn btn-primary">Connect on LinkedIn</a>
+      </div>
+    </main>
   </div>
+
+  <footer>
+    <p>© 2023 Neon Typing Test | Created by Manas Sharma</p>
+    <p>Email: ManasMailsss@gmail.com</p>
+  </footer>
+
   <script src="script.js"></script>
 </body>
 </html>
