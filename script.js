@@ -2,6 +2,7 @@ let startTime, endTime;
 let timerInterval;
 let currentPosition = 0;
 let correctChars = 0;
+let isTestRunning = false;
 
 const sentences = [
   "This website is created for fun and my coding practice",
@@ -34,18 +35,19 @@ let currentSentence = sentences[currentSentenceIndex];
 // Initialize the typing test
 document.addEventListener('DOMContentLoaded', () => {
   displayNextSentence();
-  document.getElementById('input').addEventListener('input', handleTyping);
-  document.getElementById('input').addEventListener('keydown', handleKeyDown);
+  const inputElement = document.getElementById('input');
+  inputElement.addEventListener('input', handleTyping);
+  inputElement.addEventListener('keydown', handleKeyDown);
 });
 
 function displayNextSentence() {
-  currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
   currentSentence = sentences[currentSentenceIndex];
   renderQuote();
   document.getElementById('input').value = "";
   currentPosition = 0;
   correctChars = 0;
   resetResults();
+  document.getElementById('input').focus();
 }
 
 function renderQuote() {
@@ -67,27 +69,42 @@ function renderQuote() {
 }
 
 function handleTyping(e) {
-  if (!startTime) {
+  if (!isTestRunning) {
     startTimer();
+    isTestRunning = true;
   }
 
   const inputText = e.target.value;
-  const currentChar = inputText[inputText.length - 1];
+  const inputLength = inputText.length;
   
-  if (currentChar === currentSentence[currentPosition]) {
-    correctChars++;
-    currentPosition++;
-  } else {
-    // Don't advance position for incorrect characters
-    e.target.value = inputText.slice(0, -1);
+  // Handle backspace
+  if (inputLength < currentPosition) {
+    currentPosition = inputLength;
+    renderQuote();
+    return;
   }
-
+  
+  // Check current character
+  if (inputLength > 0) {
+    const currentChar = inputText[inputLength - 1];
+    if (currentChar === currentSentence[currentPosition]) {
+      correctChars++;
+    }
+    currentPosition = inputLength;
+  }
+  
   renderQuote();
   updateCharacterCount();
+  
+  // Check if sentence is completed
+  if (currentPosition === currentSentence.length) {
+    stopTimer();
+    calculateResults();
+  }
 }
 
 function handleKeyDown(e) {
-  if (e.key === 'Enter') {
+  if (e.key === 'Enter' && isTestRunning) {
     e.preventDefault();
     stopTimer();
     calculateResults();
@@ -124,19 +141,24 @@ function calculateResults() {
   document.getElementById('accuracy').textContent = `${accuracy.toFixed(1)}%`;
   document.getElementById('wpm').textContent = Math.round(wpm);
   
-  // Reset for next round
-  setTimeout(displayNextSentence, 3000);
+  // Move to next sentence after delay
+  setTimeout(() => {
+    currentSentenceIndex = (currentSentenceIndex + 1) % sentences.length;
+    isTestRunning = false;
+    startTime = null;
+    endTime = null;
+    displayNextSentence();
+  }, 2000);
 }
 
 function calculateWPM(timeInSeconds) {
-  const words = currentSentence.split(/\s+/).length;
+  // Average word length is 5 characters
+  const words = correctChars / 5;
   const minutes = timeInSeconds / 60;
   return words / minutes;
 }
 
 function resetResults() {
-  startTime = null;
-  endTime = null;
   document.getElementById('wpm').textContent = '0';
   document.getElementById('accuracy').textContent = '0%';
   document.getElementById('time').textContent = '0s';
